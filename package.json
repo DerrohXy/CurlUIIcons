@@ -6,12 +6,11 @@
         "email": "derrickwafula1500@gmail.com",
         "url": "https://github.com/DerrohXy"
     },
-    "description": "Custom library for Icon components. Build for CurlUI.",
+    "description": "Custom library for Icon components. Built for CurlUI.",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "exports": {
-        "./ai": "./dist/ai/index.js",
         "./bi": "./dist/bi/index.js",
         "./bs": "./dist/bs/index.js",
         "./cg": "./dist/cg/index.js",
