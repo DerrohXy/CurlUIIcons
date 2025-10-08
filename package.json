@@ -1,0 +1,78 @@
+{
+    "name": "curlui-icons",
+    "version": "0.0.1",
+    "author": {
+        "name": "Derrick Wafula",
+        "email": "derrickwafula1500@gmail.com",
+        "url": "https://github.com/DerrohXy"
+    },
+    "description": "Custom library for Icon components. Build for CurlUI.",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "./ai": "./dist/ai/index.js",
+        "./bi": "./dist/bi/index.js",
+        "./bs": "./dist/bs/index.js",
+        "./cg": "./dist/cg/index.js",
+        "./ci": "./dist/ci/index.js",
+        "./di": "./dist/di/index.js",
+        "./fa": "./dist/fa/index.js",
+        "./fa6": "./dist/fa6/index.js",
+        "./fc": "./dist/fc/index.js",
+        "./fi": "./dist/fi/index.js",
+        "./gi": "./dist/gi/index.js",
+        "./go": "./dist/go/index.js",
+        "./gr": "./dist/gr/index.js",
+        "./hi": "./dist/hi/index.js",
+        "./hi2": "./dist/hi2/index.js",
+        "./im": "./dist/im/index.js",
+        "./io": "./dist/io/index.js",
+        "./io5": "./dist/io5/index.js",
+        "./lia": "./dist/lia/index.js",
+        "./lu": "./dist/lu/index.js",
+        "./md": "./dist/md/index.js",
+        "./pi": "./dist/pi/index.js",
+        "./ri": "./dist/ri/index.js",
+        "./rx": "./dist/rx/index.js",
+        "./si": "./dist/si/index.js",
+        "./sl": "./dist/sl/index.js",
+        "./tb": "./dist/tb/index.js",
+        "./tfi": "./dist/tfi/index.js",
+        "./ti": "./dist/ti/index.js",
+        "./vsc": "./dist/vsc/index.js",
+        "./wi": "./dist/wi/index.js"
+    },
+    "sideEffects": false,
+    "scripts": {
+        "rollup": "rollup --config --bundleConfigAsCjs",
+        "rollup-watch": "rollup -w --config --bundleConfigAsCjs",
+        "build": "tsc && npm run rollup && ./post-build.sh",
+        "build:watch": "tsc && npm run rollup-watch && ./post-build.sh",
+        "build:analyze": "tsc && npm run rollup && ./postbuild.sh && npx rollup-plugin-visualizer dist/stats.html",
+        "size": "npm run build && npx size-limit"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [],
+    "license": "MIT",
+    "peerDependencies": {
+        "curlui": "^0.0.8"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.1",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^12.1.0",
+        "@types/react": "^19.1.12",
+        "@types/react-dom": "^19.1.9",
+        "rollup": "^4.28.1",
+        "rollup-plugin-dts": "^6.1.1",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-visualizer": "^5.12.0",
+        "size-limit": "^11.0.2",
+        "tslib": "^2.8.1",
+        "typescript": "^5.7.2"
+    }
+}

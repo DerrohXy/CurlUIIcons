@@ -1,0 +1,126 @@
+{
+    "sideEffects": false,
+    "module": "./index.js",
+    "exports": {
+        "./bi": {
+            "import": "./bi/index.js",
+            "types": "./bi/index.d.ts"
+        },
+        "./bs": {
+            "import": "./bs/index.js",
+            "types": "./bs/index.d.ts"
+        },
+        "./cg": {
+            "import": "./cg/index.js",
+            "types": "./cg/index.d.ts"
+        },
+        "./ci": {
+            "import": "./ci/index.js",
+            "types": "./ci/index.d.ts"
+        },
+        "./di": {
+            "import": "./di/index.js",
+            "types": "./di/index.d.ts"
+        },
+        "./fa": {
+            "import": "./fa/index.js",
+            "types": "./fa/index.d.ts"
+        },
+        "./fa6": {
+            "import": "./fa6/index.js",
+            "types": "./fa6/index.d.ts"
+        },
+        "./fc": {
+            "import": "./fc/index.js",
+            "types": "./fc/index.d.ts"
+        },
+        "./fi": {
+            "import": "./fi/index.js",
+            "types": "./fi/index.d.ts"
+        },
+        "./gi": {
+            "import": "./gi/index.js",
+            "types": "./gi/index.d.ts"
+        },
+        "./go": {
+            "import": "./go/index.js",
+            "types": "./go/index.d.ts"
+        },
+        "./gr": {
+            "import": "./gr/index.js",
+            "types": "./gr/index.d.ts"
+        },
+        "./hi": {
+            "import": "./hi/index.js",
+            "types": "./hi/index.d.ts"
+        },
+        "./hi2": {
+            "import": "./hi2/index.js",
+            "types": "./hi2/index.d.ts"
+        },
+        "./im": {
+            "import": "./im/index.js",
+            "types": "./im/index.d.ts"
+        },
+        "./io": {
+            "import": "./io/index.js",
+            "types": "./io/index.d.ts"
+        },
+        "./io5": {
+            "import": "./io5/index.js",
+            "types": "./io5/index.d.ts"
+        },
+        "./lia": {
+            "import": "./lia/index.js",
+            "types": "./lia/index.d.ts"
+        },
+        "./lu": {
+            "import": "./lu/index.js",
+            "types": "./lu/index.d.ts"
+        },
+        "./md": {
+            "import": "./md/index.js",
+            "types": "./md/index.d.ts"
+        },
+        "./pi": {
+            "import": "./pi/index.js",
+            "types": "./pi/index.d.ts"
+        },
+        "./ri": {
+            "import": "./ri/index.js",
+            "types": "./ri/index.d.ts"
+        },
+        "./rx": {
+            "import": "./rx/index.js",
+            "types": "./rx/index.d.ts"
+        },
+        "./si": {
+            "import": "./si/index.js",
+            "types": "./si/index.d.ts"
+        },
+        "./sl": {
+            "import": "./sl/index.js",
+            "types": "./sl/index.d.ts"
+        },
+        "./tb": {
+            "import": "./tb/index.js",
+            "types": "./tb/index.d.ts"
+        },
+        "./tfi": {
+            "import": "./tfi/index.js",
+            "types": "./tfi/index.d.ts"
+        },
+        "./ti": {
+            "import": "./ti/index.js",
+            "types": "./ti/index.d.ts"
+        },
+        "./vsc": {
+            "import": "./vsc/index.js",
+            "types": "./vsc/index.d.ts"
+        },
+        "./wi": {
+            "import": "./wi/index.js",
+            "types": "./wi/index.d.ts"
+        }
+    }
+}
