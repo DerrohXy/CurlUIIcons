@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES6",
-        "module": "NodeNext",
+        "module": "ESNext",
         "lib": [
             "DOM",
             "ESNext"
@@ -12,7 +12,7 @@
         "strict": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "nodenext",
+        "moduleResolution": "bundler",
         "skipLibCheck": true,
         "sourceMap": true,
         "isolatedModules": true,

@@ -6,8 +6,6 @@ icons=(
   lia lu md pi ri rx si sl tb tfi ti vsc wi
 )
 
-for icon in "${icons[@]}"; do
-  cp "src/$icon/package.json" "dist/$icon"
-done
+# No longer copy per-folder package.json files; root exports control subpaths
 
 # cp "src/icons/package.json" "dist/icons"
