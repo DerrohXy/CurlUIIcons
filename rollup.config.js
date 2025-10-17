@@ -100,13 +100,13 @@ export default [
             {
                 file: `dist/${dir}/index.cjs.js`,
                 format: "cjs",
-                sourcemap: true,
+                sourcemap: false,
                 exports: "named",
             },
             {
                 file: `dist/${dir}/index.esm.js`,
                 format: "esm",
-                sourcemap: true,
+                sourcemap: false,
             },
         ],
         plugins: [
