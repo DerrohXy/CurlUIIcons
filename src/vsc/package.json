@@ -1,4 +1,4 @@
 {
     "sideEffects": false,
-    "module": "./index.js"
+    "module": "./index.esm.js"
 }
