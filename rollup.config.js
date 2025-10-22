@@ -98,21 +98,25 @@ export default [
         input: `src/${dir}/index.ts`,
         output: [
             {
-                file: `dist/${dir}/index.cjs.js`,
+                file: `dist/${dir}/index.js`,
                 format: "cjs",
-                sourcemap: false,
+                sourcemap: true,
                 exports: "named",
             },
             {
                 file: `dist/${dir}/index.esm.js`,
                 format: "esm",
-                sourcemap: false,
+                sourcemap: true,
             },
         ],
         plugins: [
             resolve({ browser: true, preferBuiltins: false }),
             commonjs(),
-            typescript({ tsconfig: "./tsconfig.json", declaration: false, declarationMap: false }),
+            typescript({
+                tsconfig: "./tsconfig.json",
+                declaration: false,
+                declarationMap: false,
+            }),
             terser({
                 compress: { drop_console: true, drop_debugger: true },
             }),
