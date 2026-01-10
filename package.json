@@ -182,7 +182,7 @@
     "keywords": [],
     "license": "MIT",
     "peerDependencies": {
-        "curlui": "^0.0.13"
+        "curlui": "^0.0.14"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^28.0.1",
