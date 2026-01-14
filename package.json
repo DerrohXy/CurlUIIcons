@@ -1,6 +1,6 @@
 {
     "name": "curlui-icons",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "author": {
         "name": "Derrick Wafula",
         "email": "derrickwafula1500@gmail.com",
@@ -182,7 +182,7 @@
     "keywords": [],
     "license": "MIT",
     "peerDependencies": {
-        "curlui": "^0.0.14"
+        "curlui": "^0.0.15"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^28.0.1",
