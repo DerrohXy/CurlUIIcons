@@ -1,9 +1,9 @@
 import { CreateElement, CreateComponent } from "curlui";
 import {
-    CurlUIElementProps,
-    CurlUIRenderElement,
-    CurlUISvgTag,
-    CurlUINativeElement,
+    ElementProps,
+    RenderElement,
+    SvgTag,
+    NativeElement,
 } from "curlui/types";
 
 type SVGAttr = {
@@ -11,21 +11,15 @@ type SVGAttr = {
 };
 
 type SVGProps = {
-    tag: CurlUISvgTag;
+    tag: SvgTag;
     attr: SVGAttr;
     child?: Array<SVGProps>;
 };
 
-type CustomSVGProps = SVGProps & CurlUIElementProps<CurlUINativeElement>;
+type IconProps = ElementProps<NativeElement>;
 
-function parseAttributes(attributes: CurlUIElementProps<CurlUINativeElement>) {
-    let parsed: CurlUIElementProps<CurlUINativeElement> = {};
-    Object.keys(attributes).map((k) => {
-        if (["tag", "attr"].includes(k)) {
-            return;
-        }
-        parsed[k] = attributes[k];
-    });
+function parseAttributes(attributes: IconProps) {
+    let parsed: IconProps = {};
 
     if (attributes.style && attributes.style.fontSize) {
         let s = attributes.style.fontSize;
@@ -40,40 +34,27 @@ function parseAttributes(attributes: CurlUIElementProps<CurlUINativeElement>) {
     return parsed;
 }
 
-function createSvg(properties: CustomSVGProps): CurlUIRenderElement {
-    let children: Array<SVGProps> = properties.child || [];
-
-    if (properties.tag === "svg") {
-        properties.attr.fill = "currentColor";
-        properties.attr.stroke = "currentColor";
-
-        if (properties.style) {
-            if (!properties.style.color) {
-                properties.style.color = "currentColor";
-            }
-        } else {
-            properties.style = { color: "currentColor" };
-        }
-    }
-
-    return children.length < 1
-        ? CreateElement(properties.tag, properties.attr)
-        : CreateElement(
-              properties.tag,
-              { ...properties.attr, ...parseAttributes(properties) },
-              ...children.map((x) => {
-                  return createSvg(x);
-              }),
-          );
-}
-
 export function GenIcon(
     properties: SVGProps,
-): (props: CurlUIElementProps<CurlUINativeElement>) => CurlUIRenderElement {
-    return CreateComponent({
+): (props: IconProps) => RenderElement {
+    return CreateComponent<IconProps>({
         render() {
-            let props: CustomSVGProps = this.getProps();
-            return createSvg({ ...properties, ...props });
+            let props: IconProps = this.getProps(),
+                parsedProps = parseAttributes(props);
+
+            return CreateElement(
+                "svg",
+                {
+                    fill: "currentColor",
+                    stroke: "currentColor",
+                    strokeWidth: "0",
+                    ...properties.attr,
+                    ...parsedProps,
+                },
+                ...(properties.child || []).map((t) => {
+                    return CreateElement(t.tag, { ...t.attr });
+                }),
+            );
         },
     });
 }
