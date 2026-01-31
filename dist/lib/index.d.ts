@@ -1,12 +1,13 @@
-import { CurlUIElementProps, CurlUIRenderElement, CurlUISvgTag, CurlUINativeElement } from "curlui/types";
+import { ElementProps, RenderElement, SvgTag, NativeElement } from "curlui/types";
 type SVGAttr = {
     [key: string]: any;
 };
 type SVGProps = {
-    tag: CurlUISvgTag;
+    tag: SvgTag;
     attr: SVGAttr;
     child?: Array<SVGProps>;
 };
-export declare function GenIcon(properties: SVGProps): (props: CurlUIElementProps<CurlUINativeElement>) => CurlUIRenderElement;
+type IconProps = ElementProps<NativeElement>;
+export declare function GenIcon(properties: SVGProps): (props: IconProps) => RenderElement;
 export {};
 //# sourceMappingURL=index.d.ts.map
