@@ -16,7 +16,7 @@ export function GenIcon(properties) {
     return CreateComponent({
         render() {
             let props = this.getProps(), parsedProps = parseAttributes(props);
-            return CreateElement("svg", Object.assign(Object.assign({ fill: "currentColor", stroke: "currentColor", strokeWidth: "0" }, properties.attr), parsedProps), ...(properties.child || []).map((t) => {
+            return CreateElement("svg", Object.assign(Object.assign({ fill: "currentColor", stroke: "currentColor", "stroke-width": "0" }, properties.attr), parsedProps), ...(properties.child || []).map((t) => {
                 return CreateElement(t.tag, Object.assign({}, t.attr));
             }));
         },
