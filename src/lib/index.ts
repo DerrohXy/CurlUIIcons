@@ -47,7 +47,7 @@ export function GenIcon(
                 {
                     fill: "currentColor",
                     stroke: "currentColor",
-                    // "stroke-width": "0",
+                    "stroke-width": "0",
                     ...properties.attr,
                     ...parsedProps,
                 },
