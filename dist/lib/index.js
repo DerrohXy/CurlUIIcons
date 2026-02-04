@@ -1,16 +1,16 @@
 import { CreateElement, CreateComponent } from "curlui";
 function parseAttributes(attributes) {
-    let parsed = {};
     if (attributes.style && attributes.style.fontSize) {
         let s = attributes.style.fontSize;
-        parsed.width = s;
-        parsed.height = s;
+        attributes.style.width = s;
+        attributes.style.height = s;
     }
-    else {
-        parsed.width = attributes.width || "15px";
-        parsed.height = attributes.height || "15px";
+    if (!attributes.style) {
+        attributes.style = {};
     }
-    return Object.assign(Object.assign({}, parsed), attributes);
+    attributes.style.width = attributes.style.width || "15px";
+    attributes.style.height = attributes.style.height || "15px";
+    return Object.assign({}, attributes);
 }
 export function GenIcon(properties) {
     return CreateComponent({
