@@ -10,7 +10,7 @@ function parseAttributes(attributes) {
         parsed.width = attributes.width || "15px";
         parsed.height = attributes.height || "15px";
     }
-    return parsed;
+    return Object.assign(Object.assign({}, parsed), attributes);
 }
 export function GenIcon(properties) {
     return CreateComponent({
