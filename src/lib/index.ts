@@ -31,7 +31,7 @@ function parseAttributes(attributes: IconProps) {
         parsed.height = attributes.height || "15px";
     }
 
-    return parsed;
+    return { ...parsed, ...attributes };
 }
 
 export function GenIcon(
